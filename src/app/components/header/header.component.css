@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background-color: var(--azul);
+  padding: 0 24px;
+}
+
+.buttonsMenu {
+  align-self: center;
+  color: var(--cor-fonte-secundaria);
+  background-color: none;
+}
+
+.accountMenu {
+  font-size: 40px;
+  height: 40px;
+  width: 40px;
+}

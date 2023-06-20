@@ -1,7 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 10vh;
   background-color: var(--azul);
   padding: 0 24px;
 }
@@ -16,13 +16,4 @@
   font-size: 40px;
   height: 40px;
   width: 40px;
-}
-
-mat-sidenav-container {
-  height: calc(100vh - 80px);
-}
-
-mat-sidenav {
-  width: 200px;
-  background-color: var(--azul);
 }

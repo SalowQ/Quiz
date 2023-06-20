@@ -1,13 +1,13 @@
 <app-header (event)="handleEvent($event)"> </app-header>
 <mat-sidenav-container>
   <mat-sidenav [opened]="opened" position="end">
-    <a>um</a>
-    <a>dois</a>
-    <!-- <button mat-button (click)="opened = !opened">esconder</button> -->
+    <div class="sideNav">
+      <a class="menuItems">Ranking</a>
+      <a class="menuItems">Settings</a>
+      <a class="menuItems">Find me</a>
+    </div>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <main>
-      <router-outlet></router-outlet>
-    </main>
-  </mat-sidenav-content>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
 </mat-sidenav-container>

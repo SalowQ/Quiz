@@ -1,4 +1,13 @@
-<app-header> </app-header>
-<main>
-  <router-outlet></router-outlet>
-</main>
+<app-header (event)="handleEvent($event)"> </app-header>
+<mat-sidenav-container>
+  <mat-sidenav [opened]="opened" position="end">
+    <a>um</a>
+    <a>dois</a>
+    <!-- <button mat-button (click)="opened = !opened">esconder</button> -->
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

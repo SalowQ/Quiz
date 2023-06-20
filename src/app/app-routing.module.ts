@@ -1,3 +1,4 @@
+import { SettingsComponent } from './components/settings/settings.component';
 import { RankingComponent } from './components/ranking/ranking.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'ranking',
     component: RankingComponent,
+  },
+  {
+    path: 'settings',
+    component: SettingsComponent,
   },
 ];
 

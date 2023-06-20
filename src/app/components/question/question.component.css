@@ -1,0 +1,73 @@
+.buttonsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+}
+
+.buttons {
+  background-color: var(--branco);
+  color: var(--cor-fonte-secundaria);
+  font-size: 16px;
+  font-family: var(--fonte-principal);
+  border: 1px solid #c7b7b7;
+  border-radius: 2em;
+  width: 12em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-align: center;
+  line-height: 3em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+  margin: 1em;
+}
+
+.buttons span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--lilas);
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+
+.buttons:hover {
+  color: var(--branco);
+}
+
+.buttons:hover span {
+  transform: translateY(0) scale(2);
+}
+
+.buttons span:nth-child(1) {
+  --n: 1;
+}
+
+.buttons span:nth-child(2) {
+  --n: 2;
+}
+
+.buttons span:nth-child(3) {
+  --n: 3;
+}
+
+.buttons span:nth-child(4) {
+  --n: 4;
+}
+
+.out {
+  width: 5em;
+  background-color: var(--vermelho);
+  color: var(--branco);
+  border: none;
+}
+
+.out:hover {
+  transform: scale(1.05);
+}

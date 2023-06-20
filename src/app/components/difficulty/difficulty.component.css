@@ -24,7 +24,7 @@
   margin: 1em;
 }
 
-div span {
+.buttons span {
   position: absolute;
   width: 25%;
   height: 100%;

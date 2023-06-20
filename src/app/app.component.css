@@ -4,7 +4,7 @@ mat-sidenav-container {
 
 mat-sidenav {
   width: 40vw;
-  background-color: var(--lilas);
+  background-color: var(--azul);
 }
 
 .sideNav {
@@ -13,6 +13,13 @@ mat-sidenav {
 }
 
 .menuItems {
-  padding: 16px;
+  color: var(--cor-fonte-secundaria);
+  padding: 16px 24px;
   font-weight: bold;
+  text-decoration: none;
+}
+
+.menuItems:hover {
+  color: var(--branco);
+  background-color: var(--lilas);
 }

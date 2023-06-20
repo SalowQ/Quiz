@@ -1,3 +1,4 @@
+import { RankingComponent } from './components/ranking/ranking.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DifficultyComponent } from './components/difficulty/difficulty.component';
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'question',
     component: QuestionComponent,
+  },
+  {
+    path: 'ranking',
+    component: RankingComponent,
   },
 ];
 

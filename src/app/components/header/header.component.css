@@ -2,14 +2,14 @@
   display: flex;
   justify-content: space-between;
   height: 10vh;
-  background-color: var(--azul);
+
   padding: 0 24px;
 }
 
 .buttonsMenu {
   align-self: center;
   color: var(--cor-fonte-secundaria);
-  background-color: none;
+  background-color: var(--branco);
 }
 
 .accountMenu {

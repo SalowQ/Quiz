@@ -8,6 +8,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { DifficultyComponent } from './components/difficulty/difficulty.component';
 import { QuestionComponent } from './components/question/question.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RankingComponent } from './components/ranking/ranking.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     DifficultyComponent,
     QuestionComponent,
+    RankingComponent,
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,12 +1,12 @@
-<app-header (event)="handleEvent($event)"> </app-header>
 <mat-sidenav-container>
   <mat-sidenav [opened]="opened" position="end">
     <div class="sideNav">
-      <a class="menuItems">Ranking</a>
-      <a class="menuItems">Settings</a>
-      <a class="menuItems">Find me</a>
+      <a routerLink="/ranking" class="menuItems">Ranking</a>
+      <a routerLink="/settings" class="menuItems">Settings</a>
+      <a href="https://linktr.ee/igordesousa" class="menuItems">Find me</a>
     </div>
   </mat-sidenav>
+  <app-header (event)="handleEvent($event)"> </app-header>
   <main>
     <router-outlet></router-outlet>
   </main>

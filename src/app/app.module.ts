@@ -10,6 +10,7 @@ import { QuestionComponent } from './components/question/question.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RankingComponent } from './components/ranking/ranking.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SettingsComponent } from './components/settings/settings.component';
     QuestionComponent,
     RankingComponent,
     SettingsComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

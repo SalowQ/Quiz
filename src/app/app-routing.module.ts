@@ -1,4 +1,4 @@
-import { SettingsComponent } from './components/settings/settings.component';
+import { ProfileComponent } from './components/profile/profile.component';
 import { RankingComponent } from './components/ranking/ranking.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -19,8 +19,8 @@ const routes: Routes = [
     component: RankingComponent,
   },
   {
-    path: 'settings',
-    component: SettingsComponent,
+    path: 'profile',
+    component: ProfileComponent,
   },
 ];
 

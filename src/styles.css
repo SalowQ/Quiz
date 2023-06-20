@@ -18,6 +18,12 @@ body {
   background-color: var(--branco);
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .title {
   padding: 40px;
   font-size: 16px;

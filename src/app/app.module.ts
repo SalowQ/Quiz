@@ -1,3 +1,4 @@
+import { ProfileComponent } from './components/profile/profile.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,8 +10,6 @@ import { DifficultyComponent } from './components/difficulty/difficulty.componen
 import { QuestionComponent } from './components/question/question.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RankingComponent } from './components/ranking/ranking.component';
-import { SettingsComponent } from './components/settings/settings.component';
-import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +18,6 @@ import { ProfileComponent } from './components/profile/profile.component';
     DifficultyComponent,
     QuestionComponent,
     RankingComponent,
-    SettingsComponent,
     ProfileComponent,
   ],
   imports: [

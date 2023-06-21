@@ -10,6 +10,7 @@ import { DifficultyComponent } from './components/difficulty/difficulty.componen
 import { QuestionComponent } from './components/question/question.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RankingComponent } from './components/ranking/ranking.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { RankingComponent } from './components/ranking/ranking.component';
     QuestionComponent,
     RankingComponent,
     ProfileComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

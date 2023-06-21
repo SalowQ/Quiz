@@ -1,3 +1,4 @@
+import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { RankingComponent } from './components/ranking/ranking.component';
 import { NgModule } from '@angular/core';
@@ -6,6 +7,10 @@ import { DifficultyComponent } from './components/difficulty/difficulty.componen
 import { QuestionComponent } from './components/question/question.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+  },
   {
     path: 'difficulty',
     component: DifficultyComponent,

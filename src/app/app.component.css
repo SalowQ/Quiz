@@ -23,3 +23,7 @@ mat-sidenav {
   color: var(--branco);
   background-color: var(--lilas);
 }
+
+.activeLink {
+  background-color: #f3f3f3;
+}

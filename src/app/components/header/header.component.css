@@ -11,6 +11,10 @@
   background-color: var(--branco);
 }
 
+.buttonsMenu:hover {
+  cursor: pointer;
+}
+
 .accountMenu {
   font-size: 40px;
   height: 40px;

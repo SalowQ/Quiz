@@ -18,6 +18,10 @@ body {
   background-color: var(--branco);
 }
 
+main {
+  padding: 32px;
+}
+
 ul {
   list-style-type: none;
   margin: 0;

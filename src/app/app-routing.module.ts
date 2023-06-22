@@ -16,16 +16,19 @@ const routes: Routes = [
     component: DifficultyComponent,
   },
   {
-    path: 'question',
+    path: 'question/:dif',
     component: QuestionComponent,
+    title: 'Quiz | Question',
   },
   {
     path: 'ranking',
     component: RankingComponent,
+    title: 'Quiz | Ranking',
   },
   {
     path: 'profile',
     component: ProfileComponent,
+    title: 'Quiz | Profile',
   },
 ];
 

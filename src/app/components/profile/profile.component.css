@@ -13,7 +13,6 @@
   margin: 0;
   display: flex;
   justify-content: flex-end;
-  gap: 1em;
 }
 
 .mat-card > .mat-card-actions:last-child {
@@ -37,6 +36,16 @@ mat-card-subtitle {
   text-align: center;
 }
 
+/* mat-card-actions > button:hover {
+  transform: scale(1.2);
+  
+} */
+
 mat-icon {
   color: var(--cor-fonte-secundaria);
+}
+mat-icon:hover {
+  transform: scale(1.5);
+  color: var(--lilas);
+  transition-duration: 2s;
 }

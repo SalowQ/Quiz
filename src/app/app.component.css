@@ -22,6 +22,7 @@ mat-sidenav {
 .menuItems:hover {
   color: var(--branco);
   background-color: var(--lilas);
+  transition: 1s;
 }
 
 .activeLink {

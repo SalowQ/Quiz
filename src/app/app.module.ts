@@ -11,6 +11,7 @@ import { QuestionComponent } from './components/question/question.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RankingComponent } from './components/ranking/ranking.component';
 import { HomeComponent } from './components/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HomeComponent } from './components/home/home.component';
     AppRoutingModule,
     MaterialModule,
     BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

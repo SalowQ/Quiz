@@ -12,6 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RankingComponent } from './components/ranking/ranking.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SucessComponent } from './components/sucess/sucess.component';
+import { FailComponent } from './components/fail/fail.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     RankingComponent,
     ProfileComponent,
     HomeComponent,
+    SucessComponent,
+    FailComponent,
   ],
   imports: [
     BrowserModule,

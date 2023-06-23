@@ -1,22 +1,62 @@
-<h1 class="title">{{ Question!.question.text }}</h1>
+<h1 class="title">{{ Question?.question?.text }}</h1>
 <div class="buttonsList">
-  <button mat-raised-button routerLink="/question" class="buttons">
+  <button
+    mat-raised-button
+    class="buttons"
+    [class.activeRight]="
+      isButtonClicked && Question?.correctAnswer === answers[0]
+    "
+    [class.activeWrong]="
+      isButtonClicked && Question?.correctAnswer != answers[0]
+    "
+    (click)="selectAnswer(Question?.correctAnswer === answers[0])"
+  >
     {{ answers[0] }}
     <span></span> <span></span> <span></span> <span></span>
   </button>
-  <button mat-raised-button routerLink="/question" class="buttons">
+  <button
+    mat-raised-button
+    class="buttons"
+    [class.activeRight]="
+      isButtonClicked && Question?.correctAnswer === answers[1]
+    "
+    [class.activeWrong]="
+      isButtonClicked && Question?.correctAnswer != answers[1]
+    "
+    (click)="selectAnswer(Question?.correctAnswer === answers[1])"
+  >
     {{ answers[1] }}
     <span></span> <span></span> <span></span> <span></span>
   </button>
-  <button mat-raised-button routerLink="/question" class="buttons">
+  <button
+    mat-raised-button
+    class="buttons"
+    [class.activeRight]="
+      isButtonClicked && Question?.correctAnswer === answers[2]
+    "
+    [class.activeWrong]="
+      isButtonClicked && Question?.correctAnswer != answers[2]
+    "
+    (click)="selectAnswer(Question?.correctAnswer === answers[2])"
+  >
     {{ answers[2] }}
     <span></span> <span></span> <span></span> <span></span>
   </button>
-  <button mat-raised-button routerLink="/question" class="buttons">
+  <button
+    mat-raised-button
+    class="buttons"
+    [class.activeRight]="
+      isButtonClicked && Question?.correctAnswer === answers[3]
+    "
+    [class.activeWrong]="
+      isButtonClicked && Question?.correctAnswer != answers[3]
+    "
+    (click)="selectAnswer(Question?.correctAnswer === answers[3])"
+  >
     {{ answers[3] }}
     <span></span> <span></span> <span></span> <span></span>
   </button>
-  <button mat-raised-button routerLink="/question" class="buttons out">
+  <button mat-raised-button routerLink="/fail" class="buttons out">
     <mat-icon>close</mat-icon>
   </button>
 </div>

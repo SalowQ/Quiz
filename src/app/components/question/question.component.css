@@ -71,3 +71,11 @@
 .out:hover {
   transform: scale(1.05);
 }
+
+.activeWrong {
+  background-color: var(--vermelho);
+}
+
+.activeRight {
+  background-color: var(--verde);
+}

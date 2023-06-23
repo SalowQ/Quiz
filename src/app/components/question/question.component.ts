@@ -1,7 +1,7 @@
 import { TriviaService } from './../trivia.service';
 import { Question } from './../question';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-question',
@@ -11,16 +11,19 @@ import { ActivatedRoute } from '@angular/router';
 export class QuestionComponent implements OnInit {
   Question?: Question;
   answers: string[] = [];
+  isButtonClicked: boolean = false;
 
-  constructor(private service: TriviaService, private route: ActivatedRoute) {}
+  constructor(
+    private service: TriviaService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     const dif = this.route.snapshot.paramMap.get('dif') ?? '';
-    console.log(dif);
 
     this.service.fetch(dif).subscribe((Array) => {
       const QuestionSelected = Array[0];
-      console.log(QuestionSelected);
       this.Question = {
         category: QuestionSelected.category,
         id: QuestionSelected.id,
@@ -33,7 +36,6 @@ export class QuestionComponent implements OnInit {
         incorrectAnswers: QuestionSelected.incorrectAnswers,
         type: 'text_choice',
       };
-
       this.shuffleAnswers();
     });
   }
@@ -53,6 +55,19 @@ export class QuestionComponent implements OnInit {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
+  selectAnswer(gotRight) {
+    this.isButtonClicked = true;
+    if (gotRight) {
+      setTimeout(() => {
+        this.router.navigate(['/sucess']);
+      }, 3000);
+    } else {
+      setTimeout(() => {
+        this.router.navigate(['/fail']);
+      }, 3000);
     }
   }
 }

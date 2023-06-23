@@ -1,3 +1,5 @@
+import { FailComponent } from './components/fail/fail.component';
+import { SucessComponent } from './components/sucess/sucess.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { RankingComponent } from './components/ranking/ranking.component';
@@ -29,6 +31,16 @@ const routes: Routes = [
     path: 'profile',
     component: ProfileComponent,
     title: 'Quiz | Profile',
+  },
+  {
+    path: 'sucess',
+    component: SucessComponent,
+    title: 'Quiz | Question Sucess',
+  },
+  {
+    path: 'fail',
+    component: FailComponent,
+    title: 'Quiz | Question Fail',
   },
 ];
 

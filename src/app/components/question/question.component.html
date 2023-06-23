@@ -1,19 +1,19 @@
 <h1 class="title">{{ Question!.question.text }}</h1>
 <div class="buttonsList">
   <button mat-raised-button routerLink="/question" class="buttons">
-    {{ Question?.correctAnswer }}
+    {{ answers[0] }}
     <span></span> <span></span> <span></span> <span></span>
   </button>
   <button mat-raised-button routerLink="/question" class="buttons">
-    {{ Question!.incorrectAnswers[0] }}
+    {{ answers[1] }}
     <span></span> <span></span> <span></span> <span></span>
   </button>
   <button mat-raised-button routerLink="/question" class="buttons">
-    {{ Question!.incorrectAnswers[1] }}
+    {{ answers[2] }}
     <span></span> <span></span> <span></span> <span></span>
   </button>
   <button mat-raised-button routerLink="/question" class="buttons">
-    {{ Question!.incorrectAnswers[2] }}
+    {{ answers[3] }}
     <span></span> <span></span> <span></span> <span></span>
   </button>
   <button mat-raised-button routerLink="/question" class="buttons out">

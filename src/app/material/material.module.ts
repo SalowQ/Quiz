@@ -5,9 +5,9 @@ import {
   MatButtonModule,
   MatSidenavModule,
   MatToolbarModule,
-  MatFormFieldModule,
-  MatInputModule,
   MatCardModule,
+  MatInputModule,
+  MatFormFieldModule,
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -16,11 +16,11 @@ const materialModules = [
   MatButtonModule,
   MatSidenavModule,
   MatToolbarModule,
-  MatFormFieldModule,
   ReactiveFormsModule,
-  FormsModule,
-  MatInputModule,
   MatCardModule,
+  FormsModule,
+  MatFormFieldModule,
+  MatInputModule,
 ];
 @NgModule({
   declarations: [],

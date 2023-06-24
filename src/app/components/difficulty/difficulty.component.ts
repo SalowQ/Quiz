@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./difficulty.component.css'],
 })
 export class DifficultyComponent implements OnInit {
+  levels = ['Easy', 'Medium', 'Hard'];
   constructor() {}
 
   ngOnInit(): void {}

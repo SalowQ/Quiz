@@ -70,4 +70,15 @@ export class QuestionComponent implements OnInit {
       }, 3000);
     }
   }
+
+  showAlert() {
+    const result = confirm('really wish to give up?');
+    if (result) {
+      // Ação a ser executada quando confirmado
+      this.router.navigate(['/fail']);
+    } else {
+      // Ação a ser executada quando cancelado
+      alert('keep going!');
+    }
+  }
 }

@@ -3,60 +3,15 @@
   <button
     mat-raised-button
     class="buttons"
-    [class.activeRight]="
-      isButtonClicked && Question?.correctAnswer === answers[0]
-    "
-    [class.activeWrong]="
-      isButtonClicked && Question?.correctAnswer != answers[0]
-    "
-    (click)="selectAnswer(Question?.correctAnswer === answers[0])"
+    [class.activeRight]="isButtonClicked && Question?.correctAnswer === answer"
+    [class.activeWrong]="isButtonClicked && Question?.correctAnswer !== answer"
+    (click)="selectAnswer(Question?.correctAnswer === answer)"
+    *ngFor="let answer of answers"
   >
-    {{ answers[0] }}
+    {{ answer }}
     <span></span> <span></span> <span></span> <span></span>
   </button>
-  <button
-    mat-raised-button
-    class="buttons"
-    [class.activeRight]="
-      isButtonClicked && Question?.correctAnswer === answers[1]
-    "
-    [class.activeWrong]="
-      isButtonClicked && Question?.correctAnswer != answers[1]
-    "
-    (click)="selectAnswer(Question?.correctAnswer === answers[1])"
-  >
-    {{ answers[1] }}
-    <span></span> <span></span> <span></span> <span></span>
-  </button>
-  <button
-    mat-raised-button
-    class="buttons"
-    [class.activeRight]="
-      isButtonClicked && Question?.correctAnswer === answers[2]
-    "
-    [class.activeWrong]="
-      isButtonClicked && Question?.correctAnswer != answers[2]
-    "
-    (click)="selectAnswer(Question?.correctAnswer === answers[2])"
-  >
-    {{ answers[2] }}
-    <span></span> <span></span> <span></span> <span></span>
-  </button>
-  <button
-    mat-raised-button
-    class="buttons"
-    [class.activeRight]="
-      isButtonClicked && Question?.correctAnswer === answers[3]
-    "
-    [class.activeWrong]="
-      isButtonClicked && Question?.correctAnswer != answers[3]
-    "
-    (click)="selectAnswer(Question?.correctAnswer === answers[3])"
-  >
-    {{ answers[3] }}
-    <span></span> <span></span> <span></span> <span></span>
-  </button>
-  <button mat-raised-button routerLink="/fail" class="buttons out">
+  <button mat-raised-button (click)="showAlert()" class="buttons out">
     <mat-icon>close</mat-icon>
   </button>
 </div>

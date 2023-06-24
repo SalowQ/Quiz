@@ -1,4 +1,4 @@
-<mat-sidenav-container>
+<mat-sidenav-container app-theme class="body">
   <mat-sidenav [opened]="opened" position="end">
     <div class="sideNav">
       <a routerLinkActive="activeLink" class="menuItems">Login</a>
@@ -8,7 +8,7 @@
       <a routerLink="/ranking" routerLinkActive="activeLink" class="menuItems"
         >Ranking</a
       >
-      <a class="menuItems">Night Mode</a>
+      <a (click)="toggle()" class="menuItems">Night Mode</a>
       <a href="https://linktr.ee/igordesousa" target="_blank" class="menuItems"
         >Find Me</a
       >

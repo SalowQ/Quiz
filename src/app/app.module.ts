@@ -1,3 +1,6 @@
+import { darkTheme } from './theme/dark-theme';
+import { lightTheme } from './theme/light-teme';
+import { ThemeModule } from './theme/theme.module';
 import { ProfileComponent } from './components/profile/profile.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -33,6 +36,10 @@ import { FailComponent } from './components/fail/fail.component';
     MaterialModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ThemeModule.forRoot({
+      themes: [lightTheme, darkTheme],
+      active: 'light',
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

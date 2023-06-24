@@ -1,7 +1,7 @@
 .profileCard {
-  background-color: #f3f3f3;
+  background-color: var(--background-trans);
   border-radius: 1em;
-  color: var(--cor-fonte-secundaria);
+  color: var(--on-background);
 }
 .profileImage {
   width: 10em;
@@ -36,14 +36,14 @@ mat-card-subtitle {
   text-align: center;
 }
 
-/* mat-card-actions > button:hover {
-  transform: scale(1.2);
-  
-} */
+mat-card-actions > button {
+  color: red;
+}
 
 mat-icon {
-  color: var(--cor-fonte-secundaria);
+  color: #000;
 }
+
 mat-icon:hover {
   transform: scale(1.5);
   color: var(--lilas);

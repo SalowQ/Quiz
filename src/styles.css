@@ -15,7 +15,6 @@
 
 body {
   margin: 0;
-  background-color: var(--branco);
 }
 
 main {
@@ -26,11 +25,4 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-.title {
-  padding: 16px;
-  font-size: 16px;
-  text-align: center;
-  color: var(--cor-fonte-secundaria);
 }

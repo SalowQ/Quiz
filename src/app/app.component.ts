@@ -1,3 +1,4 @@
+import { ThemeService } from './theme/theme.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -9,7 +10,18 @@ export class AppComponent {
   opened = false;
   title = 'quiz';
 
+  constructor(private themeService: ThemeService) {}
+
   handleEvent(event: boolean) {
     this.opened = event;
+  }
+
+  toggle() {
+    const active = this.themeService.getActiveTheme();
+    if (active.name === 'light') {
+      this.themeService.setTheme('dark');
+    } else {
+      this.themeService.setTheme('light');
+    }
   }
 }

@@ -7,8 +7,8 @@
 
 .buttonsMenu {
   align-self: center;
-  color: var(--cor-fonte-secundaria);
-  background-color: var(--branco);
+  color: var(--on-background);
+  background-color: var(--background);
 }
 
 .buttonsMenu:hover {

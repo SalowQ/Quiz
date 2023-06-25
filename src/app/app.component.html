@@ -1,20 +1,40 @@
 <mat-sidenav-container app-theme class="body">
-  <mat-sidenav [opened]="opened" position="end">
+  <mat-sidenav #sidenav position="end">
     <div class="sideNav">
-      <a routerLinkActive="activeLink" class="menuItems">Login</a>
-      <a routerLink="/profile" routerLinkActive="activeLink" class="menuItems"
+      <a
+        (click)="sidenav.close()"
+        routerLink="/"
+        routerLinkActive="activeLink"
+        class="menuItems"
+        >Home</a
+      >
+      <a
+        (click)="sidenav.close()"
+        routerLink="/profile"
+        routerLinkActive="activeLink"
+        class="menuItems"
         >Profile</a
       >
-      <a routerLink="/ranking" routerLinkActive="activeLink" class="menuItems"
+      <a
+        (click)="sidenav.close()"
+        routerLink="/ranking"
+        routerLinkActive="activeLink"
+        class="menuItems"
         >Ranking</a
       >
-      <a (click)="toggle()" class="menuItems">Night Mode</a>
-      <a href="https://linktr.ee/igordesousa" target="_blank" class="menuItems"
+      <a (click)="sidenav.close()" (click)="toggleTheme()" class="menuItems"
+        >Night Mode</a
+      >
+      <a
+        (click)="sidenav.close()"
+        href="https://linktr.ee/igordesousa"
+        target="_blank"
+        class="menuItems"
         >Find Me</a
       >
     </div>
   </mat-sidenav>
-  <app-header (event)="handleEvent($event)"> </app-header>
+  <app-header (event)="sidenav.open()"> </app-header>
   <main>
     <router-outlet></router-outlet>
   </main>

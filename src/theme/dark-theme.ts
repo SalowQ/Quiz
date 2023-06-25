@@ -3,11 +3,11 @@ import { Theme } from './symbols';
 export const darkTheme: Theme = {
   name: 'dark',
   properties: {
-    '--background': '#1F2125',
-    '--background-trans': '#2b2525',
-    '--on-background': '#fff',
+    '--background': '#444444',
+    '--background-trans': '#332e2e',
+    '--on-background': '#fefbff',
     '--primary': '#295178',
-    '--on-primary': '#fff',
+    '--on-primary': '#fefbff',
     '--first': '#c9c98b',
     '--second': '#808080',
     '--third': '#cfb697',

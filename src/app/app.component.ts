@@ -1,4 +1,4 @@
-import { ThemeService } from './theme/theme.service';
+import { ThemeService } from '../theme/theme.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -12,11 +12,7 @@ export class AppComponent {
 
   constructor(private themeService: ThemeService) {}
 
-  handleEvent(event: boolean) {
-    this.opened = event;
-  }
-
-  toggle() {
+  toggleTheme() {
     const active = this.themeService.getActiveTheme();
     if (active.name === 'light') {
       this.themeService.setTheme('dark');

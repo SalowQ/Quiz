@@ -1,4 +1,11 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  OnInit,
+  Output,
+} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,17 +13,17 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  opened = false;
+  isOpen = false;
 
   @Output() event = new EventEmitter<boolean>();
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit() {}
 
   toggleMenu() {
-    this.opened = !this.opened;
-    let openedSon = this.opened;
-    this.event.emit(openedSon);
+    this.isOpen = !this.isOpen;
+    this.event.emit(this.isOpen);
+    console.log(this.isOpen);
   }
 }

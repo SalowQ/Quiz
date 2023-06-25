@@ -1,13 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 :root {
-  --azul: #a3d9ff;
   --lilas: #7e6b8f;
   --verde: #96e6b3;
   --vermelho: #da3e52;
-  --cor-fonte-principal: #041833;
-  --cor-fonte-secundaria: #444444;
-  --branco: #fefbff;
   --fonte-principal: "Roboto", sans-serif;
 
   font-family: var(--fonte-principal);

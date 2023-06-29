@@ -1,32 +1,45 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {
-  MatIconModule,
-  MatButtonModule,
-  MatSidenavModule,
-  MatToolbarModule,
-  MatCardModule,
-  MatInputModule,
-  MatFormFieldModule,
-  MatDialogModule,
-} from '@angular/material';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
+import { GoogleSigninButtonModule } from '@abacritt/angularx-social-login';
 
-const materialModules = [
-  MatIconModule,
-  MatButtonModule,
-  MatSidenavModule,
-  MatToolbarModule,
-  ReactiveFormsModule,
-  MatCardModule,
-  FormsModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatDialogModule,
-];
 @NgModule({
   declarations: [],
-  imports: [CommonModule, materialModules],
-  exports: [materialModules],
+  imports: [
+    CommonModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDialogModule,
+    GoogleSigninButtonModule,
+  ],
+  exports: [
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDialogModule,
+    GoogleSigninButtonModule,
+  ],
 })
 export class MaterialModule {}

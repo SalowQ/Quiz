@@ -7,6 +7,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DifficultyComponent } from './components/difficulty/difficulty.component';
 import { QuestionComponent } from './components/question/question.component';
+import { AuthGuardService } from './auth-guard.service';
 
 const routes: Routes = [
   {
@@ -16,6 +17,7 @@ const routes: Routes = [
   {
     path: 'difficulty',
     component: DifficultyComponent,
+    canActivate: [AuthGuardService],
   },
   {
     path: 'question/:dif',
@@ -31,6 +33,7 @@ const routes: Routes = [
     path: 'profile',
     component: ProfileComponent,
     title: 'Quiz | Profile',
+    canActivate: [AuthGuardService],
   },
   {
     path: 'sucess',

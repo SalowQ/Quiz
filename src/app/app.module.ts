@@ -17,6 +17,13 @@ import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SucessComponent } from './components/sucess/sucess.component';
 import { FailComponent } from './components/fail/fail.component';
+import { AuthGuardService } from './auth-guard.service';
+import {
+  GoogleLoginProvider,
+  GoogleSigninButtonDirective,
+  SocialAuthServiceConfig,
+  SocialLoginModule,
+} from '@abacritt/angularx-social-login';
 
 @NgModule({
   declarations: [
@@ -40,8 +47,28 @@ import { FailComponent } from './components/fail/fail.component';
       themes: [lightTheme, darkTheme],
       active: 'light',
     }),
+    SocialLoginModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: true, //keeps the user signed in
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '843738827516-funbbbjoh8n77emkjamoq2sha78v2vmo.apps.googleusercontent.com'
+            ), // your client id
+          },
+        ],
+        onError: (err) => {
+          console.log(err);
+        },
+      } as SocialAuthServiceConfig,
+    },
+    AuthGuardService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

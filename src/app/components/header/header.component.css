@@ -11,6 +11,11 @@
   background-color: var(--background);
 }
 
+.imgMenu {
+  width: 40px;
+  border-radius: 40px;
+}
+
 .buttonsMenu:hover {
   cursor: pointer;
 }

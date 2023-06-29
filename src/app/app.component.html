@@ -9,6 +9,7 @@
         class="menuItems"
         >Home</a
       >
+      <a class="menuItems">Login</a>
       <a
         (click)="sidenav.close()"
         routerLink="/profile"
@@ -35,7 +36,7 @@
       >
     </div>
   </mat-sidenav>
-  <app-header (event)="sidenav.open()"> </app-header>
+  <app-header (event)="sidenav.toggle()"> </app-header>
   <main>
     <router-outlet></router-outlet>
   </main>

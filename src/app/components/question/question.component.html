@@ -1,7 +1,6 @@
 <h1 class="title">{{ Question?.question?.text }}</h1>
 <div class="buttonsList">
   <button
-    mat-raised-button
     class="buttons"
     [class.activeRight]="isButtonClicked && Question?.correctAnswer === answer"
     [class.activeWrong]="isButtonClicked && Question?.correctAnswer !== answer"
@@ -11,7 +10,5 @@
     {{ answer }}
     <span></span> <span></span> <span></span> <span></span>
   </button>
-  <button mat-raised-button (click)="showAlert()" class="buttons out">
-    <mat-icon>close</mat-icon>
-  </button>
+  <button (click)="showAlert()" class="buttons out">X</button>
 </div>

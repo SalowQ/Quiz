@@ -1,3 +1,4 @@
+import { SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,7 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  user: SocialUser | null = null;
 
-  ngOnInit(): void {}
+  constructor(private socialAuthService: SocialAuthService) {}
+
+  ngOnInit(): void {
+    this.socialAuthService.authState.subscribe((user) => {
+      this.user = user;
+    });
+  }
+
+  logOut() {
+    this.socialAuthService.signOut();
+  }
 }

@@ -13,7 +13,12 @@
     Start
     <span></span> <span></span> <span></span> <span></span>
   </button>
+  <button *ngIf="user" class="buttons" (click)="logOut()">
+    LogOut
+    <span></span> <span></span> <span></span> <span></span>
+  </button>
   <asl-google-signin-button
+    *ngIf="!user"
     type="standard"
     size="medium"
   ></asl-google-signin-button>

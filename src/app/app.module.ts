@@ -1,5 +1,5 @@
 import { darkTheme } from '../theme/dark-theme';
-import { lightTheme } from '../theme/light-teme';
+import { lightTheme } from '../theme/light-theme';
 import { ThemeModule } from '../theme/theme.module';
 import { ProfileComponent } from './components/profile/profile.component';
 import { NgModule } from '@angular/core';
@@ -53,13 +53,16 @@ import {
     {
       provide: 'SocialAuthServiceConfig',
       useValue: {
-        autoLogin: true, //keeps the user signed in
+        autoLogin: true,
         providers: [
           {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider(
-              '843738827516-funbbbjoh8n77emkjamoq2sha78v2vmo.apps.googleusercontent.com'
-            ), // your client id
+              '843738827516-funbbbjoh8n77emkjamoq2sha78v2vmo.apps.googleusercontent.com',
+              {
+                oneTapEnabled: false,
+              }
+            ),
           },
         ],
         onError: (err) => {

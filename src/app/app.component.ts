@@ -1,9 +1,7 @@
 import { UserService } from './components/user.service';
-import { AuthGuardService } from './auth-guard.service';
 import { SocialUser } from '@abacritt/angularx-social-login';
 import { ThemeService } from '../theme/theme.service';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import {
   SocialAuthService,
   GoogleLoginProvider,
@@ -22,7 +20,6 @@ export class AppComponent implements OnInit {
 
   constructor(
     private themeService: ThemeService,
-    private router: Router,
     private socialAuthService: SocialAuthService,
     private userService: UserService
   ) {}
@@ -43,9 +40,5 @@ export class AppComponent implements OnInit {
     } else {
       this.themeService.setTheme('light');
     }
-  }
-
-  refreshToken(): void {
-    this.socialAuthService.refreshAuthToken(GoogleLoginProvider.PROVIDER_ID);
   }
 }

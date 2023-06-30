@@ -1,15 +1,8 @@
 <mat-toolbar class="header">
-  <mat-icon routerLink="/profile" class="buttonsMenu accountMenu"
+  <mat-icon *ngIf="!user" routerLink="/profile" class="buttonsMenu accountMenu"
     >account_circle</mat-icon
   >
-  <!-- <img
-    [src]="
-      user
-        ? user.photoUrl
-        : 'https://www.petlove.com.br/images/breeds/193433/profile/original/akita_p.jpg?1532538103'
-    "
-    class="imgMenu"
-  /> -->
+  <img *ngIf="user" [src]="user.photoUrl" class="imgMenu" />
   <button mat-mini-fab class="buttonsMenu" (click)="toggleMenu()">
     <mat-icon>menu</mat-icon>
   </button>

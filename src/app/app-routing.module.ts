@@ -23,6 +23,7 @@ const routes: Routes = [
     path: 'question/:dif',
     component: QuestionComponent,
     title: 'Quiz | Question',
+    canActivate: [AuthGuardService],
   },
   {
     path: 'ranking',
@@ -39,11 +40,13 @@ const routes: Routes = [
     path: 'sucess',
     component: SucessComponent,
     title: 'Quiz | Question Sucess',
+    canActivate: [AuthGuardService],
   },
   {
     path: 'fail',
     component: FailComponent,
     title: 'Quiz | Question Fail',
+    canActivate: [AuthGuardService],
   },
 ];
 

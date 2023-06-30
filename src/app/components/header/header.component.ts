@@ -1,5 +1,12 @@
-import { SocialUser } from '@abacritt/angularx-social-login';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
+import {
+  AfterContentInit,
+  Component,
+  EventEmitter,
+  OnChanges,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { UserService } from '../user.service';
 
 @Component({
@@ -13,11 +20,16 @@ export class HeaderComponent implements OnInit {
 
   @Output() event = new EventEmitter<boolean>();
 
-  constructor(private userService: UserService) {
-    this.user = this.userService.getUser();
-  }
+  constructor(
+    private userService: UserService,
+    private socialAuthService: SocialAuthService
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.socialAuthService.authState.subscribe((user) => {
+      this.user = user;
+    });
+  }
 
   toggleMenu() {
     this.isOpen = !this.isOpen;

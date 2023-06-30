@@ -2,7 +2,12 @@
   <mat-icon *ngIf="!user" routerLink="/profile" class="buttonsMenu accountMenu"
     >account_circle</mat-icon
   >
-  <img *ngIf="user" [src]="user.photoUrl" class="imgMenu" />
+  <img
+    *ngIf="user"
+    routerLink="/profile"
+    [src]="user.photoUrl"
+    class="imgMenu"
+  />
   <button mat-mini-fab class="buttonsMenu" (click)="toggleMenu()">
     <mat-icon>menu</mat-icon>
   </button>

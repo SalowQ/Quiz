@@ -16,8 +16,4 @@ export class HomeComponent implements OnInit {
       this.user = user;
     });
   }
-
-  logOut() {
-    this.socialAuthService.signOut();
-  }
 }

@@ -13,10 +13,6 @@ body {
   margin: 0;
 }
 
-main {
-  padding: 32px;
-}
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -91,4 +87,15 @@ ul {
 
 .buttons span:nth-child(4) {
   --n: 4;
+}
+
+.cdk-overlay-container {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+
+.trans {
+  --mdc-snackbar-container-color: var(--vermelho);
+  --mat-mdc-snack-bar-button-color: black;
 }

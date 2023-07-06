@@ -2,10 +2,9 @@ import { UserService } from './components/user.service';
 import { SocialUser } from '@abacritt/angularx-social-login';
 import { ThemeService } from '../theme/theme.service';
 import { Component, OnInit } from '@angular/core';
-import {
-  SocialAuthService,
-  GoogleLoginProvider,
-} from '@abacritt/angularx-social-login';
+import { SocialAuthService } from '@abacritt/angularx-social-login';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -20,8 +19,10 @@ export class AppComponent implements OnInit {
 
   constructor(
     private themeService: ThemeService,
+    private router: Router,
     private socialAuthService: SocialAuthService,
-    private userService: UserService
+    private userService: UserService,
+    private snackBar: MatSnackBar
   ) {}
 
   ngOnInit(): void {
@@ -40,5 +41,17 @@ export class AppComponent implements OnInit {
     } else {
       this.themeService.setTheme('light');
     }
+  }
+
+  logOut() {
+    this.socialAuthService.signOut();
+    this.router.navigate(['/']);
+  }
+
+  openSnackBar() {
+    this.snackBar.open('You have to log in to see this!', '👍', {
+      panelClass: 'trans',
+      duration: 3000,
+    });
   }
 }

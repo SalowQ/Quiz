@@ -11,6 +11,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 import { GoogleSigninButtonModule } from '@abacritt/angularx-social-login';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [],
@@ -27,6 +28,8 @@ import { GoogleSigninButtonModule } from '@abacritt/angularx-social-login';
     MatInputModule,
     MatDialogModule,
     GoogleSigninButtonModule,
+    MatSnackBarModule,
+    MatDialogModule,
   ],
   exports: [
     MatIconModule,
@@ -40,6 +43,8 @@ import { GoogleSigninButtonModule } from '@abacritt/angularx-social-login';
     MatInputModule,
     MatDialogModule,
     GoogleSigninButtonModule,
+    MatSnackBarModule,
+    MatDialogModule,
   ],
 })
 export class MaterialModule {}

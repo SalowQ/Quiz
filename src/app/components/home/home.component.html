@@ -9,12 +9,8 @@
   see how well you can score!
 </h1>
 <div class="buttonsList">
-  <button class="buttons" routerLink="/difficulty">
+  <button *ngIf="user" class="buttons" routerLink="/difficulty">
     Start
-    <span></span> <span></span> <span></span> <span></span>
-  </button>
-  <button *ngIf="user" class="buttons" (click)="logOut()">
-    LogOut
     <span></span> <span></span> <span></span> <span></span>
   </button>
   <asl-google-signin-button

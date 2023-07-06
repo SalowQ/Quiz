@@ -20,7 +20,6 @@ import { FailComponent } from './components/fail/fail.component';
 import { AuthGuardService } from './auth-guard.service';
 import {
   GoogleLoginProvider,
-  GoogleSigninButtonDirective,
   SocialAuthServiceConfig,
   SocialLoginModule,
 } from '@abacritt/angularx-social-login';

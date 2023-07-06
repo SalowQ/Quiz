@@ -41,7 +41,7 @@ mat-card-actions > button {
 }
 
 mat-icon {
-  color: #000;
+  color: var(--on-background);
 }
 
 mat-icon:hover {

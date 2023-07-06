@@ -1,43 +1,53 @@
-<mat-sidenav-container app-theme class="body">
-  <mat-sidenav #sidenav position="end">
-    <div class="sideNav">
-      <a
-        (click)="sidenav.close()"
-        routerLink="/"
-        routerLinkActive="activeLink"
-        [routerLinkActiveOptions]="{ exact: true }"
-        class="menuItems"
-        >Home</a
-      >
-      <a class="menuItems">Login</a>
-      <a
-        (click)="sidenav.close()"
-        routerLink="/profile"
-        routerLinkActive="activeLink"
-        class="menuItems"
-        >Profile</a
-      >
-      <a
-        (click)="sidenav.close()"
-        routerLink="/ranking"
-        routerLinkActive="activeLink"
-        class="menuItems"
-        >Ranking</a
-      >
-      <a (click)="sidenav.close()" (click)="toggleTheme()" class="menuItems"
-        >Night Mode</a
-      >
-      <a
-        (click)="sidenav.close()"
-        href="https://linktr.ee/igordesousa"
-        target="_blank"
-        class="menuItems"
-        >Find Me</a
-      >
-    </div>
-  </mat-sidenav>
-  <app-header (event)="sidenav.toggle()"> </app-header>
-  <main>
-    <router-outlet></router-outlet>
-  </main>
-</mat-sidenav-container>
+<div #container>
+  <mat-sidenav-container app-theme class="body">
+    <mat-sidenav #sidenav position="end">
+      <div class="sideNav" #appOverlayContainerWrapper1>
+        <a
+          (click)="sidenav.close()"
+          routerLink="/"
+          routerLinkActive="activeLink"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="menuItems"
+          >Home</a
+        >
+        <a
+          *ngIf="user"
+          (click)="sidenav.close()"
+          routerLink="/profile"
+          routerLinkActive="activeLink"
+          class="menuItems"
+          >Profile</a
+        >
+        <a
+          (click)="sidenav.close()"
+          routerLink="/ranking"
+          routerLinkActive="activeLink"
+          class="menuItems"
+          >Ranking</a
+        >
+        <a (click)="sidenav.close()" (click)="toggleTheme()" class="menuItems"
+          >Night Mode</a
+        >
+        <a
+          (click)="sidenav.close()"
+          href="https://linktr.ee/igordesousa"
+          target="_blank"
+          class="menuItems"
+          >Find Me</a
+        >
+        <a
+          *ngIf="user"
+          (click)="sidenav.close()"
+          (click)="logOut()"
+          class="menuItems"
+          >LogOut</a
+        >
+      </div>
+    </mat-sidenav>
+    <app-header (event)="sidenav.toggle()" (profile)="openSnackBar()">
+    </app-header>
+    <main #main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-container>
+</div>

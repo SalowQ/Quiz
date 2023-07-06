@@ -1,7 +1,13 @@
 <mat-toolbar class="header">
-  <mat-icon *ngIf="!user" routerLink="/profile" class="buttonsMenu accountMenu"
-    >account_circle</mat-icon
+  <button
+    *ngIf="!user"
+    (click)="profileTry()"
+    mat-mini-fab
+    routerLink="/profile"
+    class="buttonsMenu"
   >
+    <mat-icon>person</mat-icon>
+  </button>
   <img
     *ngIf="user"
     routerLink="/profile"
